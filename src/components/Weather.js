@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import dayjs from "dayjs";
 
-function Weather({city_name, color_name}) {
+function Weather({city_name, color_name, hover_name}) {
   
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -42,11 +42,12 @@ function Weather({city_name, color_name}) {
       <Box
         w={96}
         h={56}
-        bg="blue.500"
+        
         borderRadius="lg"
         boxShadow="2xl"
-        _hover={{ bg: "blue.400" }}
-        bgGradient="linear(to-r,blue.500, blue.200 )"
+        _hover={hover_name}
+        
+        bgGradient={color_name}
         color="white"
       >
         <Box w="full" px="8" pt="6">

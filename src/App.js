@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Wrap, WrapItem } from "@chakra-ui/layout";
+import { Box, Center, Flex, Heading, Wrap, WrapItem } from "@chakra-ui/layout";
 import { useMediaQuery } from "@chakra-ui/media-query";
 import { buildQueries } from "@testing-library/dom";
 
@@ -8,6 +8,8 @@ function App() {
   const [isNotSmallerScreen] = useMediaQuery("(min-width:800px)");
 
   return (
+    <>
+    <Heading size='3xl' textAlign='center' fontWeight="bold" mt={20}>Soccer Weather</Heading>
     <Flex
       alignItems="center"
       justifyContent="center"
@@ -15,6 +17,7 @@ function App() {
       direction={isNotSmallerScreen ? "row" : "column"}
       mt={20}
     >
+      
       <Box alignSelf="center">
         <Weather
           city_name="Tokyo"
@@ -60,7 +63,9 @@ function App() {
       
       
     </Flex>
+  </>
   );
+ 
 }
 
 export default App;

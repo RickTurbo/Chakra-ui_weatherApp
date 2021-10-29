@@ -2,13 +2,7 @@ import { IconButton } from "@chakra-ui/button";
 import { useColorMode } from "@chakra-ui/color-mode";
 import { Box, Flex, Heading } from "@chakra-ui/layout";
 import { useMediaQuery } from "@chakra-ui/media-query";
-import {
-  FaSun,
-  FaMoon,
-  FaInstagram,
-  FaGithub,
-  FaTwitter
-} from "react-icons/fa";
+import { FaSun, FaMoon } from "react-icons/fa";
 
 import Weather from "./components/Weather";
 
@@ -20,7 +14,7 @@ function App() {
   return (
     <>
       <IconButton
-      mt={4}
+        mt={4}
         ml={8}
         icon={isDark ? <FaSun /> : <FaMoon />}
         isRound="true"
@@ -29,7 +23,7 @@ function App() {
       <Heading size="3xl" textAlign="center" fontWeight="bold" mt={20}>
         Soccer Weather
       </Heading>
-      
+
       <Flex
         alignItems="center"
         justifyContent="center"

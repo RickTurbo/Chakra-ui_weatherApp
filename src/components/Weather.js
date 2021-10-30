@@ -23,7 +23,7 @@ function Weather({ city_name, color_name, hover_name }) {
       .finally(() => {
         setLoading(false);
       });
-  }, [city_name],[apiKye],[apiUrl]);
+  }, [apiKye, apiUrl, city_name]);
 
   if (loading) {
     return (
